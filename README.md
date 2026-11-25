@@ -10,21 +10,45 @@ Build topic-based practice PDFs from Cambridge International past papers. This A
 - Export a QP and an MS per topic. If a topic spans distinct formats and the paper is unclear, ask which paper to include. Theory and practical formats get separate pairs by default.
 - Preserve the context and prerequisites needed to answer each question. Keep matching numbers in the two PDFs, with the newest exam years first and a two-line serif cover.
 
-### Install and try
+### Install from a terminal
 
-The skill uses the Agent Skills format. Install the complete folder as `cambridge-topical-papers` in a compatible client's skills directory so it can read `SKILL.md` and `references/`. The optional `agents/openai.yaml` file provides Codex display metadata. [Agent Skills specification](https://agentskills.io/specification)
+With Git and Node.js 22.20 or later installed, run the command for your system and choose your AI client when prompted. [Skills CLI documentation](https://github.com/vercel-labs/skills/blob/main/docs/commands.md)
 
-**Codex** · Invoke with `$cambridge-topical-papers`. [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills)
+**macOS and Linux** · Terminal
 
-```sh
-git clone https://github.com/ashzene/split-caie-papers-by-topic.git ~/.agents/skills/cambridge-topical-papers
+```bash
+npx skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-topical-papers --copy
 ```
 
-**Claude Code** · Invoke with `/cambridge-topical-papers`. [Claude Code skills documentation](https://code.claude.com/docs/en/skills)
+**Windows** · PowerShell or Command Prompt
 
-```sh
-git clone https://github.com/ashzene/split-caie-papers-by-topic.git ~/.claude/skills/cambridge-topical-papers
+```powershell
+npx.cmd skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-topical-papers --copy
 ```
+
+To select a client directly, add `--agent` and its ID to the same command. This example targets Cursor on macOS and Linux.
+
+```bash
+npx skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-topical-papers --copy --agent cursor
+```
+
+| AI client | `--agent` value |
+| --- | --- |
+| Codex | `codex` |
+| Claude Code | `claude-code` |
+| Cursor | `cursor` |
+| GitHub Copilot | `github-copilot` |
+| OpenCode | `opencode` |
+| Gemini CLI | `gemini-cli` |
+| Windsurf | `windsurf` |
+
+`--global` installs for your user account across projects. To install for one project, run the command from its root and omit `--global`. [Full list of clients and install paths](https://github.com/vercel-labs/skills/blob/main/docs/agents.md)
+
+For manual installation, clone or copy the full repository into your client's skills directory as `cambridge-topical-papers`. Keep `SKILL.md` and `references/` together. The optional `agents/openai.yaml` file provides Codex display metadata. [Agent Skills specification](https://agentskills.io/specification)
+
+### Try it
+
+Open your client and start a new session. Use `$cambridge-topical-papers` in Codex, `/cambridge-topical-papers` in Claude Code, or select the skill by name in your client's skill menu. [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills) · [Claude Code skills documentation](https://code.claude.com/docs/en/skills)
 
 > Build 9618 Topic 19 for Paper 3. Use only local papers from 2025 and save separate QP and MS PDFs in the workspace.
 
@@ -38,21 +62,45 @@ The agent needs access to the source files and tools to read, crop and export PD
 - 每个专题分别出一份 QP 和 MS。同一专题跨理论和实操等不同考核形式且卷别不明确时，先确认要哪张卷。不同形式默认分册。
 - 保留独立作答所需的题干、图表和前置小问。两册题号对应，最新年份在前，每份都用两行衬线封面。
 
-### 安装和试用
+### 从终端安装
 
-技能采用 Agent Skills 格式。安装时把完整文件夹放到工具的技能目录里，文件夹命名为 `cambridge-topical-papers`，让工具能读取 `SKILL.md` 和 `references/`。可选的 `agents/openai.yaml` 用于配置 Codex 里的显示信息。 [Agent Skills 规范](https://agentskills.io/specification)
+装好 Git 和 Node.js 22.20 或更新版本后，按系统运行下面的命令，再在安装器里选择你用的 AI 客户端。 [Skills CLI 说明](https://github.com/vercel-labs/skills/blob/main/docs/commands.md)
 
-**Codex** · 用 `$cambridge-topical-papers` 调用。 [Codex 技能文档](https://learn.chatgpt.com/docs/build-skills)
+**macOS 和 Linux** · 终端
 
-```sh
-git clone https://github.com/ashzene/split-caie-papers-by-topic.git ~/.agents/skills/cambridge-topical-papers
+```bash
+npx skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-topical-papers --copy
 ```
 
-**Claude Code** · 用 `/cambridge-topical-papers` 调用。 [Claude Code 技能文档](https://code.claude.com/docs/en/skills)
+**Windows** · PowerShell 或命令提示符
 
-```sh
-git clone https://github.com/ashzene/split-caie-papers-by-topic.git ~/.claude/skills/cambridge-topical-papers
+```powershell
+npx.cmd skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-topical-papers --copy
 ```
+
+也可以在同一条命令末尾加上 `--agent` 和客户端 ID，直接指定装给谁。下面这条命令适用于 macOS 和 Linux 上的 Cursor。
+
+```bash
+npx skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-topical-papers --copy --agent cursor
+```
+
+| AI 客户端 | `--agent` 参数值 |
+| --- | --- |
+| Codex | `codex` |
+| Claude Code | `claude-code` |
+| Cursor | `cursor` |
+| GitHub Copilot | `github-copilot` |
+| OpenCode | `opencode` |
+| Gemini CLI | `gemini-cli` |
+| Windsurf | `windsurf` |
+
+`--global` 会把技能安装给当前用户，各个项目都能用。只想给某个项目安装时，在项目根目录运行命令并去掉 `--global`。 [完整客户端列表和安装路径](https://github.com/vercel-labs/skills/blob/main/docs/agents.md)
+
+手动安装时，把整个仓库克隆或复制到客户端的技能目录，文件夹命名为 `cambridge-topical-papers`，一起保留 `SKILL.md` 和 `references/`。可选的 `agents/openai.yaml` 用于配置 Codex 里的显示信息。 [Agent Skills 规范](https://agentskills.io/specification)
+
+### 试用
+
+装好后打开客户端，新建一个对话。Codex 里用 `$cambridge-topical-papers`，Claude Code 里用 `/cambridge-topical-papers`，其他客户端可以在技能菜单里按名称选择。 [Codex 技能文档](https://learn.chatgpt.com/docs/build-skills) · [Claude Code 技能文档](https://code.claude.com/docs/en/skills)
 
 > 整理 9618 Topic 19 的 Paper 3。只用本地 2025 年原卷，把 QP 和 MS 分别放到工作区。
 
