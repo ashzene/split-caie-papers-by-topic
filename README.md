@@ -18,14 +18,6 @@ npx skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-top
 
 [Supported clients](https://github.com/vercel-labs/skills/blob/main/docs/agents.md)
 
-## Try it
-
-Open your client and start a new session. Use `$cambridge-topical-papers` in Codex, `/cambridge-topical-papers` in Claude Code, or select the skill by name in your client's skill menu. [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills) · [Claude Code skills documentation](https://code.claude.com/docs/en/skills)
-
-> Build 9618 Topic 19 for Paper 3. Use only local papers from 2025 and save separate QP and MS PDFs in the workspace.
-
-The agent needs access to the source files and tools to read, crop and export PDFs. If it runs remotely, provide the source files or a folder it can access. Finding missing papers online requires network access. [English workflow](references/workflow-en.md)
-
 ## License
 
 The [MIT License](LICENSE) covers the skill and its documentation. Cambridge exam materials remain subject to their own terms.
