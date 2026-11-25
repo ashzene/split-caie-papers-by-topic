@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split CAIE Papers by Topic / 剑桥真题按专题整理"
+  short_description: "Cambridge topic QP/MS PDFs · 剑桥真题专题整理"
+  default_prompt: "用 $cambridge-topical-papers 整理 9618 Topic 15。只用本地 2025 年卷，分别导出 QP 和 MS 到工作区。"
