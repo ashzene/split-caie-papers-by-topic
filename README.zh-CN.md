@@ -1,6 +1,6 @@
 # Split CAIE Papers by Topic
 
-[English](README.en.md)
+[English](README.md)
 
 把 Cambridge International 历年真题按专题整理成练习册。这个 Agent Skill 会配对原卷题目（QP）和官方评分标准（MS），再按每个小问实际考的内容筛题。
 
