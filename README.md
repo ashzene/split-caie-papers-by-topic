@@ -106,11 +106,6 @@ npx skills add ashzene/split-caie-papers-by-topic --global --skill cambridge-top
 
 运行时需要能访问原卷，并且能读取、裁剪和导出 PDF。用云端工具时，可以上传原卷或指定它能访问的文件夹。联网查缺卷需要网络权限。 [中文工作流](references/workflow-zh-CN.md)
 
-## Contributors / 贡献者
-
-- [ashzene](https://github.com/ashzene) — workflow requirements and end-to-end testing / 流程需求与实际试用
-- [OpenAI Codex](https://github.com/codex) — skill workflow and bilingual documentation / 技能工作流与双语文档
-
 ## License / 许可证
 
 The [MIT License](LICENSE) covers the skill and its documentation. Cambridge exam materials remain subject to their own terms.
